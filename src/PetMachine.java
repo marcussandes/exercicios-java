@@ -6,7 +6,7 @@ public class PetMachine {
 
     private int  water = 30;
 
-    private int shampoo = 30;
+    private int shampoo = 10;
 
     private Pet pet;
 
@@ -58,15 +58,16 @@ public class PetMachine {
             System.out.println("A maquina está suja, para colocar o pet é necessário limpa-la");
         }
         if (hasPet()){
-            System.out.println("O pet" + this.pet.getName() + "está na maquina nesse momento");
+            System.out.println("O pet " + this.pet.getName() + " está na maquina nesse momento");
             return;
         }
         this.pet = pet;
+        System.out.println("O pet " + pet.getName() + " foi colocado na maquina");
     }
 
     public void removePet(){
         this.clean = this.pet.isClean();
-        System.out.println("O pet" + this.pet.getName() + "está limpo");
+        System.out.println("O pet " + this.pet.getName() + " foi tirado da máquina");
         this.pet = null;
     }
 
